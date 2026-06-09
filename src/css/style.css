@@ -91,7 +91,9 @@ padding-top: 20px;
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 #sidebar-wrapper.collapsed {
     left: -260px;
@@ -122,9 +124,11 @@ padding-top: 20px;
     }
 }
 .sidebar-nav {
-    padding: 20px 0 140px 0; /* padding-bottom alto para não esconder itens atrás do perfil fixo */
+    padding: 20px 0;
     margin: 0;
     list-style: none;
+    flex: 1;
+    overflow-y: auto;
 }
 .sidebar-nav li {
     border-bottom: 1px solid rgba(255,255,255,0.05);

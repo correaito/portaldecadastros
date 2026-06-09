@@ -2,17 +2,17 @@
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 <style>
-#sidebar-wrapper::-webkit-scrollbar {
+#sidebar-wrapper::-webkit-scrollbar, .sidebar-nav::-webkit-scrollbar {
     width: 6px;
 }
-#sidebar-wrapper::-webkit-scrollbar-track {
+#sidebar-wrapper::-webkit-scrollbar-track, .sidebar-nav::-webkit-scrollbar-track {
     background: transparent;
 }
-#sidebar-wrapper::-webkit-scrollbar-thumb {
+#sidebar-wrapper::-webkit-scrollbar-thumb, .sidebar-nav::-webkit-scrollbar-thumb {
     background: #2a3b4c; /* Azul escuro bem fininho */
     border-radius: 3px;
 }
-#sidebar-wrapper::-webkit-scrollbar-thumb:hover {
+#sidebar-wrapper::-webkit-scrollbar-thumb:hover, .sidebar-nav::-webkit-scrollbar-thumb:hover {
     background: #1e2a36;
 }
 </style>
@@ -117,7 +117,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     // Extrai o primeiro nome para não quebrar a linha
     $primeiro_nome = explode(' ', trim($nome_side))[0];
     ?>
-    <div style="position: absolute; bottom: 0; width: 100%; border-top: 1px solid rgba(255,255,255,0.05); padding: 20px 0 15px 0; background-color: #1a252f; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <div style="width: 100%; border-top: 1px solid rgba(255,255,255,0.05); padding: 20px 0 15px 0; background-color: #1a252f; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; z-index: 10;">
         <div style="margin-bottom: 12px;">
             <img src="/fotos/<?php echo $imagem_side; ?>" alt="Perfil" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid #ecf0f1; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
         </div>
