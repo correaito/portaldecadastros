@@ -27,8 +27,8 @@ if ($num_busca == 0) {
 	  $nivel = ($row_count['total'] == 0) ? '2' : '1';
 
 	  //Se não existir, grava os dados informados na tabela user
-	  $sql_inclu = "INSERT INTO user(nome, login, senha, email, sessao, nivel) VALUES
-	                ('$nome', '$login', '$senha', '$email', '$sessao', '$nivel')";
+	  $sql_inclu = "INSERT INTO user(nome, login, senha, email, sessao, nivel, foto) VALUES
+	                ('$nome', '$login', '$senha', '$email', '$sessao', '$nivel', '')";
 	  $exe_inclu = mysql_query($sql_inclu) or die (mysql_error());
       
 	  //Cria uma mensagem e envia para o usuário as credenciais por e-mail
