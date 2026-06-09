@@ -2,7 +2,9 @@
 
 > **Um pouco de história:** Este foi um dos meus primeiros sistemas desenvolvidos "do zero". Assim como os criadores do Google começaram de forma simples com as ferramentas que dominavam na época, eu utilizei os conhecimentos que tinha em PHP nativo e MySQL para solucionar um problema real e crítico de negócio.
 > 
-> O sistema nasceu entre 2014 e 2015 para dar suporte direto ao **Projeto Camboa** (implementação do sistema SAP) na **Martini Meat**, operando ativamente antes e após o *GoLive*. O objetivo principal era apoiar a área de Processos e Cadastros, garantindo que o trâmite de solicitações fosse intuitivo, automatizado e que os **Dados Mestres** fossem perfeitamente saneados para alimentar toda a complexa estrutura do SAP. O impacto prático do sistema superou as expectativas, otimizando o tempo da equipe e recebendo reconhecimento direto da gerência do projeto (Jonas Rabello) pela entrega de alto valor agregado.
+> O sistema nasceu entre 2014 e 2015 para dar suporte direto ao **Projeto Camboa** (implementação do sistema SAP) na **Martini Meat**, operando ativamente antes e após o *GoLive*. O objetivo principal era apoiar a área de Processos e Cadastros, garantindo que o trâmite de solicitações fosse intuitivo, automatizado e que os **Dados Mestres** fossem perfeitamente saneados para alimentar toda a complexa estrutura do SAP. O impacto prático do sistema superou as expectativas, otimizando o tempo da equipe e recebendo reconhecimento direto da gerência do projeto pela entrega de alto valor agregado.
+> 
+> ⚠️ **Aviso de Portfólio / Direitos:** A Martini Meat S.A. foi oficialmente adquirida pela multinacional *Emergent Cold LatAm* no final de 2021, o que significa que a empresa original não existe mais em sua forma independente. Como esta estrutura corporativa e tecnológica da época foi dissolvida, este código-fonte legado pode ser baixado, rodado e avaliado livremente como peça de portfólio, sem riscos de expor segredos ou infringir direitos de propriedade de uma operação atual.
 
 ---
 
