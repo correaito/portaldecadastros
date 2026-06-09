@@ -28,7 +28,7 @@ if ($num_busca == 0) {
 
 	  //Se não existir, grava os dados informados na tabela user
 	  $sql_inclu = "INSERT INTO user(nome, login, senha, email, sessao, nivel, foto) VALUES
-	                ('$nome', '$login', '$senha', '$email', '$sessao', '$nivel', '')";
+	                ('$nome', '$login', '$senha', '$email', '$sessao', '$nivel', 'default.png')";
 	  $exe_inclu = mysql_query($sql_inclu) or die (mysql_error());
       
 	  //Cria uma mensagem e envia para o usuário as credenciais por e-mail

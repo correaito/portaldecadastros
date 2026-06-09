@@ -21,7 +21,7 @@ if ($acao == 'novo') {
     $sql_busca = "SELECT * FROM user WHERE login = '$login'";
     $exe_busca = mysql_query($sql_busca) or die(mysql_error());
     if (mysql_num_rows($exe_busca) == 0) {
-        $sql_inclu = "INSERT INTO user(nome, login, senha, email, nivel, foto) VALUES ('$nome', '$login', '$senha', '$email', '$nivel', '')";
+        $sql_inclu = "INSERT INTO user(nome, login, senha, email, nivel, foto) VALUES ('$nome', '$login', '$senha', '$email', '$nivel', 'default.png')";
         mysql_query($sql_inclu) or die(mysql_error());
     } else {
         echo "<script>alert('Este login já está sendo utilizado por outro usuário!'); window.history.back();</script>";
