@@ -1,0 +1,370 @@
+
+/* Estilos globais
+-------------------------------------------------- */
+
+.cadform {
+padding: 40px;
+box-sizing: border-box;
+width: 100%;
+background-color: #ffffff;
+}
+
+.img-200-200 {
+   width: 340px; /* a altura se adequa proporcionalmente */
+   height: 25px;
+}
+
+form {
+  padding-left: 20px;
+}
+
+thead {
+color: #ffffff;
+}
+
+legend {
+color: #ffffff;  
+}
+
+p {margin-left: 0.5cm;}
+
+.text-info {
+  color: #FFFFFF;
+  position: left;
+}
+
+.section > p {
+font-size: 15px;
+background: #2c3e50;
+color: #FFFFFF;
+padding: 8px 15px;
+margin: 0;
+overflow: hidden;
+border-radius: 4px 4px 0 0; /* opcional: dá um ar mais polido ao topo do cabeçalho */
+}
+
+.alert-info {
+  margin-top: 15px; 
+}
+
+body {
+padding-top: 60px;
+background: url(../img/intro-bg.jpg);
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 100%;}
+
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
+
+.shapevisual {
+padding-top: 15px;
+padding-bottom: 10px;
+background-color: #ffffff;
+}
+
+
+
+/* Estilos dos formularios
+
+-------------------------------------------------- */
+
+
+.cad-form {
+padding-top: 20px;
+}
+
+
+
+/* Estilos da Sidebar Moderna
+-------------------------------------------------- */
+#sidebar-wrapper {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 60px; /* espaço da navbar para o conteúdo não ficar escondido */
+    box-sizing: border-box;
+    background-color: #2c3e50; /* Modern dark sidebar */
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-y: auto;
+}
+#sidebar-wrapper.collapsed {
+    left: -260px;
+}
+#page-content-wrapper {
+    margin-left: 250px;
+    width: auto !important;
+    float: none !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 0px 20px 20px 20px; /* Reduzindo drasticamente o padding superior para subir o painel */
+}
+#page-content-wrapper.collapsed {
+    margin-left: 0;
+}
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        left: -260px;
+        top: 0;
+        height: 100vh;
+        padding-top: 55px; /* ajuste fino para o navbar menor no celular */
+    }
+    #sidebar-wrapper.mobile-open {
+        left: 0;
+    }
+    #page-content-wrapper {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+.sidebar-nav {
+    padding: 20px 0;
+    margin: 0;
+    list-style: none;
+}
+.sidebar-nav li {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    color: #b8c7ce;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.sidebar-nav li a i {
+    margin-right: 15px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    opacity: 0.8;
+}
+.sidebar-nav li a:hover, .sidebar-nav li.active a {
+    background-color: #1e2b3c;
+    color: #ffffff;
+    border-left: 4px solid #0088cc;
+    padding-left: 21px; /* compensate for border */
+}
+.sidebar-nav li a:hover i, .sidebar-nav li.active a i {
+    opacity: 1;
+    color: #fff;
+}
+/* Ensure the body works well with the fixed navbar */
+body {
+    overflow-x: hidden;
+}
+.main-content {
+    background-color: transparent;
+}
+
+/* Dashboard Grid Fix */
+.main-content .thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-left: 0;
+}
+.main-content .thumbnails::before,
+.main-content .thumbnails::after {
+    display: none; /* remove clearfix do bootstrap */
+}
+.main-content .thumbnails > li {
+    float: none !important;
+    width: 380px !important; /* Aumentado bastante para as palavras não ficarem espremidas */
+    margin-left: 0 !important;
+    margin-bottom: 25px;
+}
+.main-content .thumbnails > li .thumbnail {
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #eaeaea;
+    background: #fff;
+    padding: 20px !important;
+}
+
+/* Alinhamento dos status (Atendidos/Pendentes/Recusados) dentro dos cards */
+.main-content .thumbnails .dashboard-stats,
+.main-content .thumbnails .row-fluid {
+    display: flex;
+    justify-content: space-between; /* Melhor espaçamento entre as três colunas */
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 15px;
+}
+.main-content .thumbnails .span4,
+.main-content .thumbnails .span3,
+.main-content .thumbnails .row-fluid > div {
+    float: none !important;
+    flex: 1; /* Garante que ocupem a largura exata e igual */
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 5px !important;
+    text-align: center;
+}
+
+
+
+/* CSS para os Graficos Circulares (Donuts) */
+.donut-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.donut-chart {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Animação sweep (forma o anel) */
+.donut-chart::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: conic-gradient(transparent var(--sweep, 0deg), #fff var(--sweep, 0deg));
+    animation: sweep 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    z-index: 1;
+}
+
+@property --sweep {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes sweep {
+    0% { --sweep: 0deg; }
+    100% { --sweep: 360deg; }
+}
+
+.donut-hole {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.donut-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1;
+}
+
+.donut-label {
+    font-size: 11px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* =========================================================================
+   RESPONSIVIDADE GERAL (Mobile)
+   ========================================================================= */
+
+/* Helper classes para o painel de perfil flexível em usuarioadm.php e usuario.php */
+.profile-header-container {
+    display: flex;
+    align-items: center;
+}
+.profile-header-image {
+    height: 80px; width: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-right: 20px; flex-shrink: 0;
+}
+.profile-header-content {
+    flex: 1; display: flex; flex-direction: column; justify-content: center;
+}
+.profile-header-info {
+    display: flex; justify-content: space-between; align-items: center; width: 100%;
+}
+.profile-header-data {
+    color: #666; font-size: 13px; line-height: 1.4; display: flex; align-items: center; flex-wrap: wrap;
+}
+.profile-header-actions {
+    margin: 0; flex-shrink: 0; display: flex; justify-content: center;
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 768px) {
+    /* Ajusta os formulários para não espremer no celular */
+    .cadform {
+        padding: 15px !important;
+    }
+    
+    /* Previne inputs de largura fixa vazando para fora do box */
+    input[type="text"], input[type="password"], input[type="email"], select, textarea, .input-xlarge, .span3, .span4 {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Painel do cabeçalho de usuário */
+    .profile-header-container {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .profile-header-image {
+        margin: 0 auto 15px auto !important;
+    }
+    .profile-header-info {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    .profile-header-data {
+        justify-content: center !important;
+    }
+    .profile-header-data > span {
+        margin-right: 10px !important;
+        margin-bottom: 5px !important;
+    }
+    .profile-header-actions {
+        margin-top: 15px !important;
+        width: 100% !important;
+    }
+}
+
+
+/* Responsividade do Logo na Navbar */
+.responsive-logo {
+    height: auto; 
+    max-height: 30px; 
+    width: auto; 
+    margin-top: 2px; 
+    max-width: 100%; 
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .responsive-logo {
+        /* No celular, faremos um crop inteligente da imagem para exibir apenas a parte esquerda (o ícone), 
+           simulando uma "versão reduzida" do logo (o famoso 'nano banana' ou ícone bacana) */
+        width: 32px;
+        height: 30px;
+        object-fit: cover;
+        object-position: left center;
+    }
+}

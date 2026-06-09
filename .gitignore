@@ -1,0 +1,13 @@
+# Pastas locais que não devem subir pro repositório
+docs/
+
+# Lixo de Sistema e Editores
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db

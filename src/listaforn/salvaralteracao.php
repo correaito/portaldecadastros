@@ -1,0 +1,38 @@
+<?php
+
+session_start();
+include("../config.php"); // conexão com o BD
+
+date_default_timezone_set('America/Sao_Paulo');
+
+$hoje = date('d-m-Y H:i:s'); // formato de data/hora padrão para gravação do log no BD
+$nome = $_SESSION['login'];
+
+$ticket=$_POST['ticket'];
+$status=$_POST['status'];
+
+
+$sql = "SELECT * FROM cadforn WHERE Status = '$status' AND ticket='$ticket'";
+$query = mysql_query($sql);
+$num_rows = mysql_num_rows($query);
+
+if($num_rows == 0) // se nenhuma referencia for encontrada, atualiza o status no BD, e grava o log com a alteração
+
+{
+
+$sql_inclu = "INSERT INTO logforn (data, usuario, alteracao, ticket)
+	   VALUES ('$hoje', '$nome', '$status', '$ticket')";
+	     $exe_inclu = mysql_query($sql_inclu) or die (mysql_error());
+
+
+$sql="UPDATE cadforn SET Status='$status' WHERE ticket='$ticket'";
+$executa= mysql_query($sql);
+
+header('Location: ../listaforn/listagemadm.php?a=alterado');} // redireciona para listagemadm.php com mensagem de êxito após a atualização
+
+else
+
+{header('Location: ../listaforn/listagemadm.php?a=alterado');} // ainda que o BD não tenha sido atualizado, o sistema irá gerar mensagem de êxito
+
+
+?>
