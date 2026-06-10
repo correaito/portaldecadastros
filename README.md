@@ -17,10 +17,25 @@ Devido à obsolescência das funções de acesso a banco de dados clássicas do 
 ---
 
 ## 🌟 Novidades da Versão Atual
-- **UI/UX Modernizada:** Tela de login totalmente nova utilizando efeitos de Glassmorphism (vidro fosco) e design limpo.
+
+### 🎨 UI/UX Modernizada
+- **Tela de Login:** Totalmente nova utilizando efeitos de Glassmorphism (vidro fosco) e design limpo.
 - **Painel Administrativo Elegante:** Barra lateral (sidebar) responsiva, modais limpas com flexbox e avatares alinhados.
-- **Visão Geral Estratégica:** Gráficos e informações importantes na dashboard para auxiliar o usuário a ter uma overview (visão geral) dos cadastros.
-- **Auto-Configuração do 1º Administrador:** O primeiro usuário cadastrado no sistema herda privilégios máximos automaticamente.
+
+### 📊 Visão Geral Estratégica
+- **Dashboard:** Gráficos e informações importantes para auxiliar o usuário a ter uma overview (visão geral) dos cadastros.
+
+### ⚙️ Funcionalidades Automatizadas
+- **Auto-Configuração:** O primeiro usuário cadastrado no sistema herda privilégios máximos (Nível de Administrador) automaticamente.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Backend:** PHP 5.6
+- **Database:** MySQL
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Infraestrutura:** Docker & Docker Compose
 
 ---
 
@@ -34,9 +49,9 @@ Devido à obsolescência das funções de acesso a banco de dados clássicas do 
 
 ---
 
-## 🛠️ Pré-requisitos
+## 📋 Pré-requisitos
 
-1. **Docker Desktop** instalado e em execução na máquina Windows.
+1. **Docker Desktop** instalado e em execução na máquina Windows ou Linux.
 2. Certifique-se de que as portas **8080** (Web) e **3306** (MySQL) não estão em uso por outras aplicações na sua máquina (ex: IIS, Apache local, MySQL Server local).
 
 ---
@@ -60,10 +75,10 @@ Abra o seu navegador e acesse:
 ### 👑 Como Criar o Primeiro Usuário (Administrador)
 Como o banco de dados é inicializado totalmente vazio por motivos de privacidade e segurança, você precisa registrar o primeiro acesso.
 
-**Método 1: Pela Interface Gráfica (Recomendado)**
+- **Método 1: Pela Interface Gráfica (Recomendado)**
 Acesse a página de Login e clique na aba **"Criar Conta"**. Como você é a primeira pessoa a se registrar, o sistema foi programado para detectar que o banco está vazio e **te conceder automaticamente o nível de Administrador (Nível 2)**.
 
-**Método 2: Manualmente (Na Unha via SQL)**
+- **Método 2: Manualmente (Na Unha via SQL)**
 Caso prefira inserir direto pelo banco de dados ou automatizar o processo, conecte-se ao MySQL na porta `3306` (usando ferramentas como DBeaver, HeidiSQL ou phpMyAdmin) e rode a query abaixo:
 ```sql
 INSERT INTO user (nome, login, senha, email, nivel) 
@@ -75,13 +90,13 @@ VALUES ('Administrador', 'admin', 'sua_senha_aqui', 'admin@dominio.com', '2');
 
 ## 🔍 Comandos Úteis
 
-### Visualizar Logs
+### 📝 Visualizar Logs
 Para acompanhar a inicialização ou depurar erros no portal:
 * **Todos os logs:** `docker compose logs -f`
 * **Logs apenas do banco:** `docker compose logs -f db`
 * **Logs do portal web (PHP/Apache):** `docker compose logs -f web`
 
-### Parar o Ambiente
+### 🛑 Parar o Ambiente
 Para parar os containers sem perder os dados salvos no banco de dados:
 ```bash
 docker compose stop
@@ -92,6 +107,7 @@ Para remover os containers e liberar as portas:
 docker compose down
 ```
 
+### ♻️ Resetar o Banco de Dados
 Caso queira redefinir o banco de dados completamente (importar o `init.sql` novamente do zero):
 ```bash
 docker compose down -v
