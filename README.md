@@ -113,3 +113,25 @@ Caso queira redefinir o banco de dados completamente (importar o `init.sql` nova
 docker compose down -v
 ```
 *(O parâmetro `-v` remove o volume persistente do banco, forçando a importação limpa na próxima inicialização)*
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições são sempre bem-vindas!
+
+1. Faça um **Fork** do projeto
+2. Crie uma **Branch** para sua feature (`git checkout -b feature/NovaFeature`)
+3. Faça o **Commit** (`git commit -m 'Adicionando NovaFeature'`)
+4. Faça o **Push** (`git push origin feature/NovaFeature`)
+5. Abra um **Pull Request**
+
+---
+
+## 📄 Licença
+
+Este projeto é disponibilizado livremente como peça de portfólio e estudo. Sinta-se livre para clonar, explorar e se inspirar no código.
+
+---
+
+Desenvolvido com ❤️ para solucionar problemas reais e apoiar a gestão de processos e cadastros.
