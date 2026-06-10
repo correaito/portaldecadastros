@@ -19,7 +19,7 @@ Devido à obsolescência das funções de acesso a banco de dados clássicas do 
 ## 🌟 Novidades da Versão Atual
 - **UI/UX Modernizada:** Tela de login totalmente nova utilizando efeitos de Glassmorphism (vidro fosco) e design limpo.
 - **Painel Administrativo Elegante:** Barra lateral (sidebar) responsiva, modais limpas com flexbox e avatares alinhados.
-- **Experiência Dinâmica:** Saudação de boas-vindas contextual baseada na hora do dia.
+- **Visão Geral Estratégica:** Gráficos e informações importantes na dashboard para auxiliar o usuário a ter uma overview (visão geral) dos cadastros.
 - **Auto-Configuração do 1º Administrador:** O primeiro usuário cadastrado no sistema herda privilégios máximos automaticamente.
 
 ---
